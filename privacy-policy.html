@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="ContenType" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Satyam Solaris</title>
+    <meta name="keywords" content="">
+    <link rel="icon" href="./assets/images/favicon/favicon.ico" type="image/ico" sizes="16x16">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css"
+        rel="stylesheet">
+    <link href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css"
+        rel="stylesheet">
+        <script src="https://kit.fontawesome.com/08c505cba5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/hover.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://d1dqad6oft2dm1.cloudfront.net/assets-20/js/jquery-3.3.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <style>
+        .swiper {
+            width: 100% !important;
+            height: 100%;
+        }        
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }        
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }        
+        .swiper {
+            margin-left: auto;
+            margin-right: auto;
+        }    
+    </style>
+    <style type='text/css'>
+    .embeddedServiceHelpButton .helpButton .uiButton {
+        background-color: #005290;
+        font-family: "Arial", sans-serif;
+    }
+    .embeddedServiceHelpButton .helpButton .uiButton:focus {
+        outline: 1px solid #005290;
+    }
+    .slick-slider .slick-prev,
+    .slick-slider .slick-next {
+        z-index: 100;
+        font-size: 2.5em;
+        height: 40px;
+        width: 40px;
+        margin-top: -20px;
+        color: #B7B7B7;
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        color: #000;
+        opacity: .3;
+        transition: opacity .25s;
+        cursor: pointer;
+    }
+    .slick-slider .slick-prev:hover,
+    .slick-slider .slick-next:hover {
+        opacity: .65;
+    }
+    .slick-slider .slick-prev {
+        left: 0;
+    }
+    .slick-slider .slick-next {
+        right: 0;
+    }
+    #detail .product-images {
+        width: 100%;
+        margin: 0 auto;
+        border: 1px solid #eee;
+    }
+    #detail .product-images li,
+    #detail .product-images figure,
+    #detail .product-images a,
+    #detail .product-images img {
+        display: block;
+        outline: none;
+        border: none;
+    }
+    #detail .product-images .main-img-slider figure {
+        margin: 0 auto;
+        padding: 0 2em;
+    }
+    #detail .product-images .main-img-slider figure a {
+        cursor: pointer;
+        cursor: -webkit-zoom-in;
+        cursor: -moz-zoom-in;
+        cursor: zoom-in;
+    }
+    #detail .product-images .main-img-slider figure a img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    #detail .product-images .thumb-nav {
+        margin: 0 auto;
+        padding: 20px 10px;
+        max-width: 600px;
+    }
+    #detail .product-images .thumb-nav.slick-slider .slick-prev,
+    #detail .product-images .thumb-nav.slick-slider .slick-next {
+        font-size: 1.2em;
+        height: 20px;
+        width: 26px;
+        margin-top: -10px;
+    }
+    #detail .product-images .thumb-nav.slick-slider .slick-prev {
+        margin-left: -30px;
+    }
+    #detail .product-images .thumb-nav.slick-slider .slick-next {
+        margin-right: -30px;
+    }
+    #detail .product-images .thumb-nav li {
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    #detail .product-images .thumb-nav li img {
+        display: block;
+        width: 100%;
+        max-width: 75px;
+        margin: 0 auto;
+        border: 2px solid transparent;
+        -webkit-transition: border-color .25s;
+        -ms-transition: border-color .25s;
+        -moz-transition: border-color .25s;
+        transition: border-color .25s;
+    }
+    #detail .product-images .thumb-nav li:hover,
+    #detail .product-images .thumb-nav li:focus {
+        border-color: #999;
+    }
+    #detail .product-images .thumb-nav li.slick-current img {
+        border-color: #d12f81;
+    }
+    .fade:not(.show) {
+        opacity: 1;
+    }
+    </style>
+</head>
+<body>
+    <header id="home">
+        <nav class="navbar navbar-default" id="hide-menu" style="padding: 10px;">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-lg-2 col-md-2 col-sm-2 ">
+                        <div class="navbar-brand d-flex align-items-center ">
+                            <a class="" href="index.html">
+                                <img src="./assets/images/logo/Satyam-Solaris.png" height="70" style="padding-bottom: 5px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 justify-content-end">
+                        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-link"><a href="index.html" class="m-link" style="font-weight: normal;">Home</a></li>
+                                <!--<li class="nav-link"><a href="index.html#atmosphere" class="m-link" style="font-weight: normal;">Overview</a></li>
+                                <li class="nav-link"><a href="index.html#configuration" class="m-link" style="font-weight: normal;">Configuration</a></li>
+                                <li class="nav-link"><a href="index.html#parkamenities" class="m-link" style="font-weight: normal;">Amenities</a></li>
+                                <li class="nav-link"><a href="index.html#gallery" class="m-link" style="font-weight: normal;">Gallery</a></li>
+                                <li class="nav-link"><a href="index.html#contactus" class="m-link" style="font-weight: normal;">Contact Us</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- <div class="flexbox"> -->
+
+    <section class="glob-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 ">
+                    <h2 class="sec-head head-center wow fadeInUp f-playfair " data-wow-duration="1s" data-wow-delay="0.5s"></h2>
+                    <div class="head-line"></div>
+                </div>
+            </div>
+            <div class="row " style="margin-top: 45px;">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h2 class="sec-head head-center wow fadeInUp f-playfair " data-wow-duration="1s" data-wow-delay="0.5s">Privacy Policy</h2>
+                    <div class="head-line"></div>
+                    <br />
+                    <div class="">
+                        <p class="text-justify text-secondary" style="font-family: 'Roboto', sans-serif !important;">
+                            A Satyam Solaris is committed to protecting and respecting your privacy. This Privacy Policy (together with and any other documents referred to therein) sets out the basis on which the personal data collected from you, or that you provide to Us will be processed by us. Please read the following carefully to understand our views and practices regarding your personal data and how we will treat it. By visiting www.satyamsolaris.com or any other of our websites/ microsites / mobile applications/ facebook / google to which this privacy policy applies ("Sites") or otherwise providing us with information you are accepting and consenting to the practices described in this policy. We collect and process some or all of the following types of information from you in the course of your use of the Sites, our provision of our services, or otherwise conducting any business relationship with you: Information that you provide by filling in forms on the Sites. This includes information provided at the time of registering to use the Sites, subscribing to our services (including but not limited to news alerts), or requesting further information or services. We may also ask you for information when you complete a survey or enter contests. Specifically, personal details such as name, email address, place of work, position, telephone number or any information input by you when using the Site, completing our survey forms or using our services. In respect of the personnel engaged by our customers and suppliers (or prospective customers and suppliers), and with whom we come into contact in connection with the relationship between us and our customer and supplier, we will process your contact details and any other information that you provide to us. If you contact us, We may keep a record of that correspondence. We may also ask you to complete surveys that We use for research purposes, although you do not have to respond to them. You may, however, visit our site anonymously. Any of the information we collect from you is to personalize your experience, to improve our Sites and to improve customer service to meet the user needs, so as to provide the user with a smooth, efficient, safe and customized experience while using the Sites. The provision of name, email address, place of work, position, and telephone number is required from you to register to use the Site. Your name and email address are required from you to register for news alerts. We will inform you at the point of collecting information from you, whether you are required to provide the information to us. We take appropriate measures to ensure that any personal data are kept secure, including security measures to prevent personal data from being accidentally lost, or used or accessed in an unauthorized way. We limit access to your personal data to those who have a genuine business need to know it. Except where the users are explicitly informed we do not share any of the user's personal information to third parties without previous consent of the user concerned. Information of a general nature may however be revealed to external parties. Satyam Solariss will not be liable in any manner for any direct or indirect damages that may arise out of the use of the Sites or information or its links, hyperlinks. A Satyam Solaris has the right to change any part of the said content on the Sites at any time at its sole discretion.
+                        </p>
+                    </div>
+                </div>                      
+            </div>
+        </div>
+    </section>
+    <section class="rera-sec">
+        <div class="container" style="margin-top: 35px;">
+            <div class="foote-wrap">
+                <img src="./assets/images/logo/Satyam-Solaris.png" class="img-thumbnail">
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p class="text-center"><img src="https://d1dqad6oft2dm1.cloudfront.net/assets-20/images/maha-rera.webp"
+                            style="display: inline-block;width: 28px;position:  absolute;margin-left: -24px;margin-top: -5px;">&nbsp;
+                        MahaRERA Registration No: <b> P15800035256</b></p>
+                    </div>
+                </div>
+                <div class="contacwrap">
+                    <div class="address-line"></div>
+                    <ul class="reralist">
+                        <li class="white">
+                            For more details visit the website: <a class="" href="https://maharera.mahaonline.gov.in"
+                                target="_blank">
+                                https://maharera.mahaonline.gov.in</a>
+                        </li>
+                    </ul>
+                    <div style="width: 100%;height: 20px;"></div>
+                    <p class="copy-right">© Copyright 2023, <span class="text-uppercase">Satyam Solaris.</span> All Rights Reserved.</p>
+                </div>
+
+            </div>
+            <div class="col-md-12 disclaimer text-center prior">-->
+                <span><a href="privacy-policy.html">Privacy policy</a></span>
+            </div>
+        </div>
+    </section>
+    <div id="pageloader">
+        <img src="https://d1dqad6oft2dm1.cloudfront.net/assets-20/images/loading.gif" alt="processing..." />
+    </div>
+    <!-- End Normal popup form -->
+    <!--<script type="text/javascript" src="lightbox/lighbox.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="https://d1dqad6oft2dm1.cloudfront.net/assets-20/js/cookie.js"></script>
+    <!-- <script src="https://d1dqad6oft2dm1.cloudfront.net/assets-20/js/wow.js"></script> -->
+    <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+    <!-- <script src="https://www.kenyt.ai/botapp/ChatbotUI/dist/js/bot-loader.js" type="text/javascript"
+        data-bot="25137311"></script>  -->
+    <script src="https://d1dqad6oft2dm1.cloudfront.net/assets-20/js/jquery.validate.js"></script>
+    <script src="https://d1dqad6oft2dm1.cloudfront.net/assets-20/js/mobilevalidate.js"></script>
+    <script src="https://d1dqad6oft2dm1.cloudfront.net/assets-20/js/popout.js"></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <form id="hidden-form" action="thank-you.php" name="hidden-form" method="POST">
+        <input id="hidden_name" type="hidden" name="fname" value="">
+        <input id="hidden_email" type="hidden" name="email" value="">
+        <input id="hidden_mobile" type="hidden" name="mobile" value="">
+        <input id="hidden_source" type="hidden" name="source" value="">
+        <!-- <button type="submit">SUBMIT</button> -->
+    </form>
+    <script>
+    $(document).ready(function() {
+        $("#toggle").click(function() {
+            var elem = $("#toggle").text();
+            if (elem == "Read More") {
+                //Stuff to do when btn is in the read more state
+                $("#toggle").text("Read Less");
+                $("#text").slideDown();
+            } else {
+                //Stuff to do when btn is in the read less state
+                $("#toggle").text("Read More");
+                $("#text").slideUp();
+            }
+        });
+    });
+    </script>
+    <script>
+    $('.moreless-button').click(function() {
+        $('.moretext').slideToggle();
+        if ($('.moreless-button').text() == "Read more") {
+            $(this).text("Read less")
+        } else {
+            $(this).text("Read more")
+        }
+    });
+    $('.moreless-button1').click(function() {
+        $('.moretext1').slideToggle();
+        if ($('.moreless-button1').text() == "Read more") {
+            $(this).text("Read less")
+        } else {
+            $(this).text("Read more")
+        }
+    });
+    </script>
+    <script>
+    jQuery(document).ready(function($) {
+        // Add smooth scrolling to all links
+        $(".m-link").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+                // Store hash
+                var hash = this.hash;
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function() {
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    // window.location.hash = hash;
+                });
+            } // End if
+        });
+        $('.navbar-nav li').on('click', function() {
+            $('.navbar-nav li.active').removeClass('active');
+            $(this).addClass('active');
+        });
+        $(document).on('click', '.navbar-collapse.in', function(e) {
+            if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) {
+                $(this).collapse('hide');
+            }
+        });
+    });
+    </script>
+    <script>
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 75) {
+            $("#hide-menu").addClass("fixHeader");
+        } else {
+            $("#hide-menu").removeClass("fixHeader");
+        }
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+        var $panels = $('.panel-collapse');
+        $panels.on('show.bs.collapse', function() {
+            $panels.not(this).collapse('hide');
+        });
+    });
+    </script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+</body>
+</html>
