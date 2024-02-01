@@ -2560,7 +2560,7 @@ b {
     margin-bottom: 40px;
   }
   #carousel-example-generic {
-    padding-top: 50px;
+    padding-top: 60px;
   }
   .rera-txt {
     font-size: 17px !important;
@@ -3347,7 +3347,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .lighter-green {
- background-color: #eaf2d7 !important;
+ background-color: #eaf2d7dd !important;
 }
 
 .h-down {
@@ -3383,4 +3383,98 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex !important;
     justify-content: center !important;
   }
+  .nav-link{
+    text-align: center;
+  }
+  /* .img-responsive{
+    display: block;
+      width: 100%;
+      height: auto;
+   
+  } */
+  
+}
+
+
+@media screen and (min-width: 1280px) and (max-width: 1366px) {
+  /* CSS styles for 720p resolution */
+  .overview{
+font-size: small;
+margin: 0;
+  }
+}
+
+
+@media screen and (min-width: 280px) and (max-width: 1366px) {
+  /* CSS styles for 720p resolution */
+  .overview{
+font-size: small;
+margin: 0 0 25px 0;
+
+  }
+  tr *{
+    font-size: 12px !important;
+  }
+}
+
+
+.hidden{
+	display: none !important;
+}
+
+#spinner{
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden; 
+	background-color: #00000088;
+}
+
+.spinner-icon {
+	margin-left: 45vw;
+	display: inline-block;
+	border: 4px solid #f3f3f3; /* Light gray border */
+	border-top: 4px solid #a6592b; /* Blue border on top */
+	border-radius: 50%; /* Rounded shape */
+	width: 50px; /* Width of the spinner */
+	height: 50px; /* Height of the spinner */
+	animation: spin 1s linear infinite; /* Animation properties */
+  }
+
+  @keyframes spin {
+	0% { transform: rotate(0deg); } /* Starting position */
+	100% { transform: rotate(360deg); } /* Ending position */
+  }
+
+
+
+.experiment {
+  color: white;
+  text-shadow:
+    2px 2px 0 #0000003f,
+    -2px 2px 0 #0000003f,
+    -2px -2px 0 #0000003f,
+    2px -2px 0 #0000003f;
+    /* color:#000;  */
+}
+.text-overlay{
+  background-color: #33333333;
+  color: white;
+  bottom: 25px;
+  position: absolute;
+  font-size: x-small;
+  padding: 0.2rem;
+  left: 15px;
+
+}
+
+.img-responsive-location{
+  display: block;
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
 }

@@ -347,6 +347,8 @@ function numbersonly(e) {
   $("form").submit(function (e) {
   
     e.preventDefault();
+    var spinner = document.getElementById("spinner");
+    spinner.classList.remove("hidden");
   
   
     var formName = (e.target).getAttribute("id");
@@ -398,15 +400,26 @@ function numbersonly(e) {
     var utm_campaign = queryParameter('utm_campaign', currentUrl);
     var utm_term = queryParameter('utm_term', currentUrl);
     var utm_content = queryParameter('utm_content', currentUrl);
+	  var gclid = queryParameter('gclid', currentUrl);
+	  var fbclid = queryParameter('fbclid', currentUrl);
+	var campaign_code = "a025i00000dPLj8AAG";
   
     var source = "Website"
     if (utm_source) {
-      if (utm_source == "google") {
+      if (utm_source == "GoogleSearch" || utm_source == "GoogleDiscovery") {
         source = (utm_term) ? "Google Search" : "Google Discovery";
-      } else if (utm_source == "facebook") {
+		  campaign_code = "a025i00000dNCyTAAW";
+      } else if (utm_source == "Facebook") {
         source = "Facebook";
+		  campaign_code = "a025i00000dPLh4AAG";
       }
   
+    }
+	if(gclid && gclid != ""){
+        campaignCode = "a025i00000dNCyTAAW";
+    }
+    else if (fbclid && fbclid != ""){
+        campaignCode = "a025i00000dPLh4AAG";
     }
   
     var data = {
@@ -428,7 +441,7 @@ function numbersonly(e) {
       "phone":  "",
       "email": email, 
       "alternateEmail":  "",
-      "campaignCode": "a025i00000dNCyTAAW",
+      "campaignCode": campaign_code,
       "url":currentUrl.substring(0,255),
       "remarks": "Source:" + utm_source + "|Medium:" + utm_medium + "|term:" + utm_term + "|content:" + utm_content + "|campaign:" + utm_campaign + "|URL:" + currentUrl.substring(0, 255),
       "UTM_Medium":  utm_medium,
@@ -437,7 +450,7 @@ function numbersonly(e) {
       }
   }
   
-  storeLeadInSFDC(sfdcData);
+  storeLeadInSFDC(sfdcData,formName);
   
   // storeLeadInEnrichr(data,formName);
   return;
@@ -445,7 +458,7 @@ function numbersonly(e) {
   });
   
   
-  function storeLeadInSFDC(data) {
+  function storeLeadInSFDC(data,formName) {
     console.log(data)
     var settings = {
         "async": true,
@@ -459,11 +472,14 @@ function numbersonly(e) {
         "data": JSON.stringify(data)
     }
   
+    var redirect_url = "response.html?action="+formName
     $.ajax(settings).done(function (response) {
         console.log(response);
         data = data['req'];
         // storeLeadInDB(data["name"], data["email"], data["mobile"], JSON.stringify(response));
-        setTimeout(function redirect_response() { window.location.href = "response.html"; }, 2000);
+        var spinner = document.getElementById("spinner");
+        spinner.classList.add("hidden");
+        setTimeout(function redirect_response() { window.location.href = redirect_url; }, 2000);
         return;
   
     });
